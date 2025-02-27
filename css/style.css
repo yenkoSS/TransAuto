@@ -18,7 +18,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 50%;
   font-family: "Roboto", sans-serif;
   user-select: none;
   overflow-x: hidden;
@@ -227,7 +227,7 @@ header {
 }
 
 .icon-logo-header {
-  width: 7rem;
+  width: 10rem;
   height: auto;
 }
 
@@ -267,6 +267,51 @@ header {
 
 .nav-header-list-lg-link:hover::after {
   right: 0;
+}
+
+.nav-header-list-sm {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 3;
+  list-style-type: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  animation-name: showNavSm;
+  animation-duration: 300ms;
+}
+
+@keyframes showNavSm {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nav-header-list-sm-link {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-dark-grey);
+}
+
+.icon-close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 35px;
+  right: 35px;
 }
 
 .text-detail-hero {
@@ -315,6 +360,11 @@ header {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.icon-menu {
+  width: 4rem;
+  height: auto;
 }
 
 /* ----- HEADER END ----- */
@@ -370,7 +420,7 @@ section {
 
 .card-services {
   color: white;
-  width: 90%;
+  width: 95%;
   border-radius: 1rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: 200ms;
@@ -419,7 +469,7 @@ section {
   background-color: var(--color-blue-light);
   padding: 5rem 2rem 2rem 2rem;
   position: relative;
-  width: 90%;
+  width: 95%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   display: flex;
   flex-direction: column;
@@ -527,6 +577,7 @@ section {
 }
 
 .card-testimonial {
+  width: 95%;
   padding: 5rem 2rem 2rem 2rem;
   background-color: var(--color-blue-light);
   position: relative;
@@ -581,7 +632,7 @@ section {
 
 .card-contact {
   padding: 2rem;
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -599,13 +650,13 @@ section {
 }
 
 .text-contact {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--color-dark-grey);
 }
 
 .icon-contact {
-  width: 6rem;
+  width: 7rem;
   height: auto;
   padding: 1.2rem;
   border-radius: 25%;
@@ -748,6 +799,10 @@ blockquote {
 
   .nav-header-list-lg {
     display: flex;
+  }
+
+  .icon-menu {
+    visibility: hidden;
   }
 
   .box-about {

@@ -16,6 +16,24 @@ navFooterLinkList.forEach((link) => {
   });
 });
 
+const navHeaderLinkSmList = document.querySelectorAll(".nav-header-list-sm-link");
+navHeaderLinkSmList.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const linkId = link.getAttribute("href");
+    document.querySelector(".nav-header-list-sm").style.display = "none";
+    document.querySelector(linkId).scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+document.querySelector(".icon-menu").addEventListener("click", () => {
+  document.querySelector(".nav-header-list-sm").style.display = "flex";
+});
+
+document.querySelector(".icon-close").addEventListener("click", () => {
+  document.querySelector(".nav-header-list-sm").style.display = "none";
+});
+
 const headerLogoEl = document.querySelector(".logo-header");
 headerLogoEl.addEventListener("click", (e) => {
   e.preventDefault();
