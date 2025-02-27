@@ -21,6 +21,7 @@ html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
   user-select: none;
+  overflow-x: hidden;
 }
 
 body {
@@ -28,7 +29,7 @@ body {
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 700;
   color: var(--color-dark-grey);
   animation-name: showH1;
@@ -100,7 +101,7 @@ button:hover {
 .btn-hero-services {
   background-color: var(--color-blue);
   color: white;
-  padding: 1.5rem 3rem;
+  padding: 1rem 2rem;
   font-size: 18px;
   font-weight: 400;
   animation-name: showBtnHeroServices;
@@ -122,7 +123,7 @@ button:hover {
 .btn-hero-schedule {
   background-color: var(--color-orange);
   color: white;
-  padding: 1.5rem 3rem;
+  padding: 1rem 2rem;
   font-size: 18px;
   font-weight: 400;
   margin-left: 2rem;
@@ -164,6 +165,10 @@ header {
   to {
     transform: translateX(0);
   }
+}
+
+.quick-contact-details {
+  gap: 1rem;
 }
 
 .icon-quick-contact {
@@ -222,11 +227,12 @@ header {
 }
 
 .icon-logo-header {
-  width: 12rem;
+  width: 7rem;
   height: auto;
 }
 
 .nav-header-list-lg {
+  display: none;
   list-style-type: none;
 }
 
@@ -351,7 +357,7 @@ section {
 }
 
 .box-about {
-  width: 80%;
+  width: 100%;
 }
 /* ----- SECTION ABOUT END ----- */
 
@@ -575,8 +581,7 @@ section {
 
 .card-contact {
   padding: 2rem;
-
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -594,25 +599,22 @@ section {
 }
 
 .text-contact {
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--color-dark-grey);
 }
 
 .icon-contact {
-  width: 8rem;
+  width: 6rem;
   height: auto;
-}
-
-.icon-contact {
-  padding: 1.6rem;
+  padding: 1.2rem;
   border-radius: 25%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   position: relative;
 }
 
 iframe {
-  width: 80%;
+  width: 100%;
   min-height: 400px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 1rem;
@@ -712,3 +714,72 @@ blockquote {
   transition: 1000ms;
 }
 /* ----- OFFSETS END ----- */
+
+/* ----- MEDIA QUERIES ----- */
+
+@media screen and (min-width: 576px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .icon-logo-header {
+    width: 12rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .btn-hero-services {
+    padding: 1.5rem 3rem;
+  }
+
+  .btn-hero-schedule {
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 58%;
+  }
+
+  .nav-header-list-lg {
+    display: flex;
+  }
+
+  .box-about {
+    width: 80%;
+  }
+
+  .icon-contact {
+    width: 8rem;
+    padding: 1.6rem;
+  }
+
+  .text-contact {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  .card-contact {
+    width: 80%;
+  }
+
+  iframe {
+    width: 80%;
+  }
+}
+
+/* ----- MEDIA QUERIES END ----- */

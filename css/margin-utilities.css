@@ -81,3 +81,11 @@
 .pY-100 {
   padding: 10rem 0;
 }
+
+.g-6 {
+  row-gap: 6rem;
+}
+
+.g-7 {
+  row-gap: 7rem;
+}
