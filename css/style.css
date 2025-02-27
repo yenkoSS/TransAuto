@@ -20,12 +20,31 @@
 html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
+  user-select: none;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 h1 {
   font-size: 6rem;
   font-weight: 700;
   color: var(--color-dark-grey);
+  animation-name: showH1;
+  animation-duration: 500ms;
+}
+
+@keyframes showH1 {
+  from {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 h1 .span1 {
@@ -67,6 +86,15 @@ button {
   font-family: "Roboto", sans-serif;
   border: none;
   background-color: transparent;
+  transition: 200ms;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn-hover:hover {
+  box-shadow: rgba(255, 255, 255, 0.644) 0px 3px 8px;
 }
 
 .btn-hero-services {
@@ -75,6 +103,20 @@ button {
   padding: 1.5rem 3rem;
   font-size: 18px;
   font-weight: 400;
+  animation-name: showBtnHeroServices;
+  animation-duration: 500ms;
+}
+
+@keyframes showBtnHeroServices {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .btn-hero-schedule {
@@ -84,6 +126,20 @@ button {
   font-size: 18px;
   font-weight: 400;
   margin-left: 2rem;
+  animation-name: showBtnHeroSchedule;
+  animation-duration: 800ms;
+}
+
+@keyframes showBtnHeroSchedule {
+  from {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* ----- HEADER ----- */
@@ -96,6 +152,18 @@ header {
 .header-quick-contact {
   background-color: var(--color-blue);
   padding: 1.6rem;
+  animation-name: showHeaderQuickContact;
+  animation-duration: 1000ms;
+}
+
+@keyframes showHeaderQuickContact {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .icon-quick-contact {
@@ -118,10 +186,43 @@ header {
 .nav-header {
   padding: 1.6rem;
   background-color: white;
+  animation-name: showNavHeader;
+  animation-duration: 700ms;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.fixed-nav-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  animation-name: showFixedNav;
+  animation-duration: 300ms;
+}
+
+@keyframes showFixedNav {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showNavHeader {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .icon-logo-header {
-  width: 14rem;
+  width: 12rem;
   height: auto;
 }
 
@@ -134,6 +235,32 @@ header {
   color: var(--color-dark-grey);
   font-size: 16px;
   font-weight: 500;
+  transition: 400ms;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: block;
+}
+
+.nav-header-list-lg-link::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  top: 100%;
+  right: 100%;
+  background-color: var(--color-orange);
+  transition: 300ms;
+  z-index: -1;
+}
+
+.nav-header-list-lg-link:hover {
+  color: var(--color-orange);
+}
+
+.nav-header-list-lg-link:hover::after {
+  right: 0;
 }
 
 .text-detail-hero {
@@ -168,11 +295,29 @@ header {
   height: 80%;
   border-radius: 5rem 0 0 5rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  animation-name: showImgHero;
+  animation-duration: 400ms;
+}
+
+@keyframes showImgHero {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* ----- HEADER END ----- */
 
 /* ----- SECTION ABOUT ----- */
+
+section {
+  scroll-margin-top: 8rem;
+}
 .section-about {
   padding: 10rem 0;
 }
@@ -222,6 +367,11 @@ header {
   width: 90%;
   border-radius: 1rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 200ms;
+}
+
+.card-services:hover {
+  transform: translateY(-10px);
 }
 
 .card-services img {
@@ -233,6 +383,7 @@ header {
   background-color: var(--color-blue);
   height: 240px;
   border-radius: 0rem 0rem 1rem 1rem;
+  transition: 100ms;
 }
 
 .card-services-title-box {
@@ -268,6 +419,11 @@ header {
   flex-direction: column;
   align-items: center;
   border-radius: 1rem;
+  transition: 300ms;
+}
+
+.card-prices:hover {
+  transform: translateY(10px);
 }
 
 .card-prices2 {
@@ -373,6 +529,20 @@ header {
   height: 100%;
 }
 
+.card-testimonial:hover {
+  animation-name: cardTestimonialEffect;
+  animation-duration: 300ms;
+}
+
+@keyframes cardTestimonialEffect {
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .card-testimonial-text {
   font-style: italic;
 }
@@ -416,6 +586,11 @@ header {
   display: flex;
   align-items: center;
   gap: 2rem;
+  transition: 300ms;
+}
+
+.contact-feature-box:hover {
+  transform: translateX(-5px);
 }
 
 .text-contact {
@@ -431,9 +606,9 @@ header {
 
 .icon-contact {
   padding: 1.6rem;
-  border: 3px solid var(--color-blue);
   border-radius: 25%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: relative;
 }
 
 iframe {
@@ -452,7 +627,7 @@ footer {
 }
 
 .icon-logo-footer {
-  width: 20rem;
+  width: 18rem;
   height: auto;
 }
 
@@ -475,4 +650,65 @@ footer {
   font-size: 20px;
   font-weight: 700;
 }
+
+.footer-social-box {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.icon-social-footer {
+  width: 25px;
+  height: auto;
+}
+
+blockquote {
+  font-size: 14px;
+  text-align: center;
+}
 /* ----- FOOTER END ----- */
+
+/* ----- OFFSETS ----- */
+.card-offsetY1 {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.card-offsetY2 {
+  transform: translateY(200px);
+  opacity: 0;
+}
+
+.card-offsetY3 {
+  transform: translateY(300px);
+  opacity: 0;
+}
+
+.card-offsetY0 {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 500ms;
+}
+
+.card-offsetX1 {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.card-offsetX2 {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.card-offsetX0 {
+  transform: translateX(0);
+  opacity: 1;
+  transition: 500ms;
+}
+
+.card-offsetX0Slow {
+  transform: translateX(0);
+  opacity: 1;
+  transition: 1000ms;
+}
+/* ----- OFFSETS END ----- */
