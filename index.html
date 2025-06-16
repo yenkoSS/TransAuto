@@ -202,7 +202,7 @@
     </section>
     <section id="services" class="section-services">
       <div class="container d-flex flex-column align-items-center">
-        <h3 class="mbot-60">Serviciile noastre includ <span>TransAuto</span></h3>
+        <h3 class="mbot-60">Serviciile noastre<span>TransAuto</span></h3>
         <p class="mbot-100">
           Oferim servicii auto complete, de la diagnoză și întreținere, până la reparații
           complexe, pentru ca mașina ta să fie mereu în siguranță pe drum!
@@ -569,44 +569,91 @@
           Dacă te-am convins și ai nevoie de serviciile noastre, mai jos găsești detalii
           despre cum ne poți contacta în vederea unei programări. Drumuri bune!
         </p>
-        <div class="row g-5" style="width: 100%">
-          <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
-            <div class="card-contact">
-              <div class="contact-feature-box">
-                <img
-                  src="icons/telefon contact service auto.svg"
-                  alt="telefon contact service auto"
-                  class="icon-contact"
-                />
-                <p class="text-contact">0749 406 638</p>
-              </div>
-              <div class="contact-feature-box">
-                <img
-                  src="icons/email contact service auto.svg"
-                  alt="email contact service auto"
-                  class="icon-contact"
-                />
-                <p class="text-contact">office@websiteshop.ro</p>
-              </div>
-              <div class="contact-feature-box">
-                <img
-                  src="icons/adresa contact service auto.svg"
-                  alt="adresa contact service auto"
-                  class="icon-contact"
-                />
-                <p class="text-contact">Strada Libertatii nr. 9</p>
-              </div>
+        <div class="row g-0" style="width: 100%">
+          <div class="col-lg-9">
+            <div class="iframe-container">
+              <iframe
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Piata%20Libertatii%20nr.%209%20Miercurea%20Ciuc+()&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ></iframe>
             </div>
           </div>
-          <div class="col-12 col-lg-6 d-flex justify-content-center">
-            <iframe
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Calea%20Bucuresti+(My%20Business%20Name)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              ><a href="https://www.gps.ie/collections/drones/">buy drones</a></iframe
-            >
+          <div class="col-lg-3">
+            <div class="card-contact-details">
+              <p class="text-contact-details-title mbot-30">Program de lucru</p>
+              <p class="text-contact-details-days">Luni <span>08:00 - 17:00</span></p>
+              <p class="text-contact-details-days">Marti <span>08:00 - 17:00</span></p>
+              <p class="text-contact-details-days">Miercuri <span>08:00 - 17:00</span></p>
+              <p class="text-contact-details-days">Joi <span>08:00 - 17:00</span></p>
+              <p class="text-contact-details-days">Vineri <span>08:00 - 17:00</span></p>
+              <p class="text-contact-details-days">Sambata<span>Închis</span></p>
+              <p class="text-contact-details-days">Duminica <span>Închis</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex align-items-center" style="width: 100%">
+          <div class="col-lg-8">
+            <form class="form-contact">
+              <p class="text-error"></p>
+              <p class="form-title mbot-40">Formular de contact</p>
+              <div class="box-form-contact mbot-20">
+                <label class="form-label" for="">Numele dumneavoastră</label>
+                <input
+                  class="form-input"
+                  id="form-name"
+                  type="text"
+                  placeholder="Introduceți numele dvs. complet..."
+                />
+              </div>
+              <div class="box-form-contact mbot-20">
+                <label class="form-label" for="">Adresă de e-mail</label>
+                <input
+                  id="form-email"
+                  class="form-input"
+                  type="text"
+                  placeholder="Introduceți adresa dvs. de e-mail..."
+                />
+              </div>
+              <div class="box-form-contact mbot-20">
+                <label class="form-label" for="">Telefon</label>
+                <input
+                  class="form-input"
+                  id="form-phone"
+                  type="text"
+                  placeholder="Introduceți numărul dvs. de telefon..."
+                />
+              </div>
+              <div class="box-form-contact mbot-20">
+                <label class="form-label" for="">Mesaj</label>
+                <textarea
+                  id="form-message"
+                  class="form-textarea"
+                  type="text"
+                  placeholder="Introduceți mesajul dumneavoastră..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-send">Trimite</button>
+              <p class="text-success">Mesajul a fost transmis! Mulțumim!</p>
+            </form>
+          </div>
+          <div class="col-lg-4">
+            <div class="card-more-details">
+              <div class="mbot-20">
+                <p class="text-more-details-title">Adresă</p>
+                <p class="text-more-details-detail">Piața Libertății nr. 9</p>
+              </div>
+              <div class="mbot-20">
+                <p class="text-more-details-title">Telefon</p>
+                <p class="text-more-details-detail">0749 406 638</p>
+              </div>
+              <div>
+                <p class="text-more-details-title">E-mail</p>
+                <p class="text-more-details-detail">contact@websiteshop.ro</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

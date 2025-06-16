@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --color-orange: #fc8211;
@@ -19,7 +19,7 @@
 
 html {
   font-size: 50%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   user-select: none;
   overflow-x: hidden;
 }
@@ -32,6 +32,7 @@ h1 {
   font-size: 4rem;
   font-weight: 700;
   color: var(--color-dark-grey);
+  font-family: "Dosis", sans-serif;
   animation-name: showH1;
   animation-duration: 500ms;
 }
@@ -51,6 +52,7 @@ h1 {
 h1 .span1 {
   text-transform: uppercase;
   color: var(--color-orange);
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 3rem;
   width: fit-content;
@@ -60,11 +62,13 @@ h3 {
   font-size: 3rem;
   font-weight: 600;
   width: fit-content;
+  font-family: "Open Sans", sans-serif;
 }
 
 h2 {
   color: white;
   font-size: 3rem;
+  font-family: "Dosis", sans-serif;
 }
 
 h3 span {
@@ -106,6 +110,7 @@ button:hover {
   font-weight: 400;
   animation-name: showBtnHeroServices;
   animation-duration: 500ms;
+  border-radius: 3px;
 }
 
 @keyframes showBtnHeroServices {
@@ -129,6 +134,7 @@ button:hover {
   margin-left: 2rem;
   animation-name: showBtnHeroSchedule;
   animation-duration: 800ms;
+  border-radius: 3px;
 }
 
 @keyframes showBtnHeroSchedule {
@@ -179,7 +185,9 @@ header {
 
 .text-quick-contact {
   color: var(--color-silver);
-  font-size: 14px;
+  font-size: 16px;
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .icon-quick-contact-social {
@@ -344,7 +352,7 @@ header {
 .img-hero {
   width: 100%;
   height: 80%;
-  border-radius: 5rem 0 0 5rem;
+  border-radius: 5px 0 0 5px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   animation-name: showImgHero;
   animation-duration: 400ms;
@@ -431,14 +439,14 @@ section {
 }
 
 .card-services img {
-  border-radius: 1rem 1rem 0rem 0rem;
+  border-radius: 3px 3px 0px 0px;
 }
 
 .card-services-content {
   padding: 2rem;
   background-color: var(--color-blue);
   height: 240px;
-  border-radius: 0rem 0rem 1rem 1rem;
+  border-radius: 0px 0px 3px 3px;
   transition: 100ms;
 }
 
@@ -474,7 +482,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 1rem;
+  border-radius: 3px;
   transition: 300ms;
 }
 
@@ -549,6 +557,7 @@ section {
   padding: 1.3rem 2.8rem;
   font-size: 16px;
   font-weight: 400;
+  border-radius: 3px;
 }
 
 .divider {
@@ -582,7 +591,7 @@ section {
   background-color: var(--color-blue-light);
   position: relative;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 1rem;
+  border-radius: 3px;
   height: 100%;
 }
 
@@ -619,7 +628,7 @@ section {
   transform: translateX(-50%);
   padding: 10px;
   background-color: var(--color-blue);
-  border-radius: 25%;
+  border-radius: 5px;
 }
 
 /* ----- SECTION TESTIMONIALS END ----- */
@@ -628,6 +637,36 @@ section {
 
 .section-contact {
   padding: 10rem 0;
+}
+
+.iframe-container {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.card-contact-details {
+  background-color: var(--color-blue);
+  width: 100%;
+  height: 100%;
+  padding: 4rem 8rem;
+}
+
+@media screen and (min-width: 992px) {
+  .card-contact-details {
+    padding: 3rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card-contact-details {
+    padding: 4rem 6rem;
+  }
 }
 
 .card-contact {
@@ -664,13 +703,149 @@ section {
   position: relative;
 }
 
+/*
 iframe {
   width: 100%;
   min-height: 400px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 1rem;
 }
+*/
 
+.text-contact-details-title {
+  font-family: "Dosis", sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+.text-contact-details-days {
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+  color: var(--color-orange);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.text-contact-details-days span {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.text-more-details-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: var(--color-dark-grey);
+}
+
+.text-more-details-detail {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card-more-details {
+  border: 1px solid rgba(0, 0, 0, 0.089);
+  padding: 3rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ----- form START ----- */
+
+.form-contact {
+  width: 100%;
+  padding: 4rem;
+  margin-bottom: 3rem;
+}
+
+.contact-details-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-form-contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 16px;
+  color: var(--color-text);
+  font-family: "Dosis", sans-serif;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+
+.form-input:focus {
+  outline: none;
+  transform: scale(1.01);
+  transition: 100ms ease;
+}
+
+.form-textarea {
+  padding: 15px;
+  resize: none;
+  height: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  font-family: "Onest", sans-serif;
+  font-size: 12px;
+  font-family: "Dosis", sans-serif;
+}
+
+.form-textarea:focus {
+  outline: none;
+  transform: scale(1.01);
+  transition: 100ms ease;
+}
+
+.text-error {
+  color: Red;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.text-success {
+  display: none;
+  font-size: 2.3rem;
+  color: var(--color-blue);
+  font-weight: 500;
+  margin-top: 3rem;
+}
+
+.form-title {
+  font-family: "Dosis", sans-serif;
+  font-size: 2.7rem;
+  font-weight: 500;
+}
+
+.btn-send {
+  background-color: var(--color-orange);
+  color: white;
+  padding: 1.3rem 2.8rem;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 3px;
+}
+
+/*----- form END ----- */
 /* ----- SECTION CONTACT END ----- */
 
 /* ----- FOOTER ----- */
@@ -702,6 +877,7 @@ footer {
 .text-footer-title {
   font-size: 20px;
   font-weight: 700;
+  font-family: "Dosis", sans-serif;
 }
 
 .footer-social-box {
@@ -829,10 +1005,6 @@ blockquote {
   }
 
   .card-contact {
-    width: 80%;
-  }
-
-  iframe {
     width: 80%;
   }
 }
