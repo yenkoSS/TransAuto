@@ -383,7 +383,7 @@ section {
   scroll-margin-top: 8rem;
 }
 .section-about {
-  padding: 10rem 0;
+  padding: 7rem 0;
 }
 
 .img-fluid {
@@ -422,7 +422,7 @@ section {
 /* ----- SECTION SERVICES ----- */
 
 .section-services {
-  padding: 10rem 0;
+  padding: 7rem 0;
   background-color: var(--color-silver);
 }
 
@@ -470,7 +470,7 @@ section {
 /* ----- SECTION PRICES ----- */
 
 .section-prices {
-  padding: 10rem 0;
+  padding: 7rem 0;
 }
 
 .card-prices {
@@ -581,7 +581,7 @@ section {
 /* ----- SECTION TESTIMONIALS ----- */
 
 .section-testimonials {
-  padding: 10rem 0;
+  padding: 7rem 0;
   background-color: var(--color-silver);
 }
 
@@ -636,7 +636,7 @@ section {
 /* ----- SECTION CONTACT ----- */
 
 .section-contact {
-  padding: 10rem 0;
+  padding: 7rem 0;
 }
 
 .iframe-container {
